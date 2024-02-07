@@ -16,8 +16,3 @@ video_duration = autobot.video_time(video_path)
 cropped_name = audio_path.split(".")[0] + "_cropped.mp4"
 cropped_source = autobot.video_crop(audio_path, startAt, startAt + video_duration, username)
 autobot.combine(video_path, cropped_source, username)
-
-if os.path.exists(video_path):
-  os.remove(video_path)
-if os.path.exists(audio_path):
-  os.remove(audio_path)
